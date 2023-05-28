@@ -19,6 +19,9 @@ const $isAuthorized = createStore<boolean | null>(null)
   .on(onLogout, () => false);
 const onVerifyToken = createEvent();
 
+$token.reset(getTokenTransportFx.fail)
+$isAuthorized.reset(getTokenTransportFx.fail)
+
 export const $loginForm = createForm<TLoginForm>({
   fields: {
     userId: {

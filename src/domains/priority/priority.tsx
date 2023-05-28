@@ -10,7 +10,7 @@ export const Priority = (): JSX.Element => {
   const isDocumentDownloadVisible = useStore(userApi.$isDocumentDownloadVisible);
 
   return (
-    <Form style={{ display: 'flex', flexDirection: 'column' }}>
+    <Form style={{ display: 'flex', flexDirection: 'column', maxWidth: '500px' }}>
       <Form.Text
         style={{
           textAlign: 'center',
